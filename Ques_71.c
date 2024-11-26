@@ -10,27 +10,25 @@
 #include<stdio.h>
 
 int main() {
-    /// given array int arr[5] = {1,2,3,4,5,6,7,8};
-    // rotate it 3 times
+    printf("Enter the size of array : ");
+    int n;
+    scanf("%d",&n);
 
-    int arr[8] = {8,7,6,5,4,3,1,2};
-    int flag = 0, pivot; // to find pivot element
+    int arr[n];
+    printf("Enter rotated sorted array : ");
 
-    for(int i = 0, j = 7; i <= j; i++, j--) {
-        if(arr[i] < arr[i + 1]) {
+    for(int i = 0; i < n; i++) {
+        scanf("%d",&arr[i]);
+    }
+
+    // we know that the pivot element is the minimum element
+    int pivot = arr[0];
+
+    for(int i = 0; i < n; i++) {
+        if(arr[i] < pivot) {
             pivot = arr[i];
-            flag = 1;
-            break;
-        }
-        if(arr[j] < arr[j - 1]) {
-            pivot = arr[j];
-            flag = 1;
-            break;
         }
     }
 
-    printf("Pivot element is %d\n",pivot);
-    return 0;
+    printf("Pivot element is : %d\n",pivot);
 }
-
-
