@@ -21,13 +21,25 @@ Author : Krishna Baheti (Branch - AI, Roll no. = B-66, Batch -2)
 
 int main() {
     int arr[10][4];
-    printf("\nEnter student details in the format : \n");
-    printf("Roll.no    Sub1     Sub2    Sub3\n\n");
+    printf("\nEnter student data : \n\n");
     for(int i = 0; i < 10; i++) {
-        printf("Enter details of student %d : ",i+1);
+        printf("Enter details of student %d : \n",i+1);
         for(int j = 0; j < 4; j++) {
-            scanf("%d",&arr[i][j]);
+            if(j == 0) {
+                printf("Enter roll no. : ");
+                scanf("%d",&arr[i][j]);
+            } else if(j == 1) {
+                printf("Enter marks in Subject 1 : ");
+                scanf("%d",&arr[i][j]);
+            } else if(j == 2) {
+                printf("Enter marks in Subject 2 : ");
+                scanf("%d",&arr[i][j]);
+            } else if(j == 3) {
+                printf("Enter marks in Subject 3 : ");
+                scanf("%d",&arr[i][j]);
+            }
         }
+        printf("\n");
     }
 
     // array storing total marks of each student
