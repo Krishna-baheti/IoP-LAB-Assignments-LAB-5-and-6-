@@ -38,17 +38,18 @@ int main() {
         }
     }
 
-    // now sort crr array
+    // now sort crr array using BUBBLE SORT
 
-    for(int i = 0; i < (n + n1 - 1); i++) {
-        for(int j = 0; j < (n + n1 - 1 - i); j++) {
+   for(int i = 0; i < n + n1 - 1; i++) {
+        for(int j = 0; j < n + n1 - 1 - i; j++) {
             if(crr[j] > crr[j + 1]) {
+                // swap crr[j] and crr[j + 1]
                 int temp = crr[j];
                 crr[j] = crr[j + 1];
                 crr[j + 1] = temp;
             }
         }
-    } 
+    }
 
 
     // print crr or merged array in sorted format
