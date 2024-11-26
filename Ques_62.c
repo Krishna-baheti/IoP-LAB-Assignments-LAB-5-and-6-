@@ -17,7 +17,7 @@ int main()
     
     for(int i = 0, j = n - 1; i <= j; i++, j--) {
         // swap arr[i] and arr[j]
-        char temp = arr[i];
+        int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
     }
